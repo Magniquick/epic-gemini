@@ -28,15 +28,15 @@ Flow Diagram
 
 ```mermaid
 flowchart TD
-  A([Start]) --> B[Launch undetected-chromedriver<br/>with native Chrome profile]
-  B --> C[Go to /free-games page]
+  A([Start]) --> B[Launch undetected-chromedriver - native Chrome profile]
+  B --> C[Go to free-games page]
   C --> D{List current free offers}
-  D -->|for each offer| E[Open offer detail (new tab)]
+  D -->|for each offer| E[Open offer detail - new tab]
   E --> F{Price is Free?}
   F -->|No| G[Skip offer<br/>log mismatch]
   F -->|Yes| H[Click Get / Add to cart]
   H --> I{CAPTCHA or verification?}
-  I -->|Yes| J[Pause automation<br/>Invoke Gemini Computer Use<br/>Ask user to solve CAPTCHA]
+  I -->|Yes| J[Pause automation - Gemini handoff for CAPTCHA]
   J --> K[User completes CAPTCHA]
   K --> H
   I -->|No| L{Redirected to checkout?}
