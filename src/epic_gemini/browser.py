@@ -12,7 +12,7 @@ class BrowserSession:
     driver: uc.Chrome
 
     @classmethod
-    def launch(cls, config: AppConfig) -> "BrowserSession":
+    def launch(cls, config: AppConfig) -> BrowserSession:
         options = uc.ChromeOptions()
         options.add_argument(f"--user-data-dir={config.user_data_dir}")
         if config.profile_dir:

@@ -15,10 +15,6 @@ Lint and format
 - `uvx ruff check .`
 - `uvx ruff format .`
 
-Type check
-
-- `uvx pyright`
-
 Notes
 
 - This project only provides the basic structure and stubs. You must implement

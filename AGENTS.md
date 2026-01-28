@@ -12,10 +12,10 @@
 ## Build, Test, and Development Commands
 
 - `uv sync --extra dev`: Create `.venv` and install runtime + dev dependencies.
+- `uv add --dev <package>`: Add dev dependencies (use `uv add <package>` only for normal deps); prefer over manual `pyproject.toml` edits.
 - `uv run epic-gemini --user-data-dir /path/to/Chrome/User\ Data`: Run the CLI.
 - `uvx ruff check .`: Lint the codebase.
 - `uvx ruff format .`: Auto-format files.
-- `uvx pyright`: Run type checking.
 
 There is no build step or packaging pipeline configured.
 

@@ -10,11 +10,6 @@ dependencies = [
     "undetected-chromedriver>=3.5.5",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pyright>=1.1.350",
-]
-
 [project.scripts]
 epic-gemini = "epic_gemini.cli:main"
 
@@ -29,8 +24,7 @@ ignore = ["ARG001"]
 [tool.ruff.format]
 quote-style = "double"
 
-[tool.pyright]
-typeCheckingMode = "basic"
-pythonVersion = "3.12"
-venvPath = "."
-venv = ".venv"
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]
